@@ -55,7 +55,7 @@ export default function DataTablePagination<TData>({
 							items={pages}
 							value={table.getState().pagination.pageIndex}
 							onValueChange={(value) => {
-								table.setPageIndex(value);
+								if (value) table.setPageIndex(value);
 							}}
 						>
 							<SelectTrigger
