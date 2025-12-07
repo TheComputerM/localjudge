@@ -92,9 +92,11 @@ function LanguageSelect() {
 		<Select
 			value={value}
 			onValueChange={(language) => {
-				navigate({
-					search: { language },
-				});
+				if (language) {
+					navigate({
+						search: { language },
+					});
+				}
 			}}
 		>
 			<SelectTrigger className="min-w-auto w-min">
